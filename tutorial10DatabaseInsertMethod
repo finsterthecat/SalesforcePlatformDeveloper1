@@ -30,8 +30,8 @@ for (Database.SaveResult sr : srList) {
 	}
 else {
     // This condition will be executed for failed records
+	System.debug('The following errors have occurred.');  //Printing error message in Debug log
 	for(Database.Error objErr : sr.getErrors()) {
-		System.debug('The following error has occurred.');  //Printing error message in Debug log
 		System.debug(objErr.getStatusCode() + ': ' + objErr.getMessage());
 		System.debug('Invoice oject field which are affected by the error: ' + objErr.getFields());
 	}
