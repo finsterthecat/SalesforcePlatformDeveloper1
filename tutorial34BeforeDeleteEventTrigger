@@ -1,6 +1,8 @@
 
 trigger myAccountTrigger on Account(before delete) {
 if (Trigger.isBefore) {
+//**How is this a good practice? Of course it is before and of course if is delete!
+//**That's the type of trigger: before delete
     if (Trigger.isDelete) {
 
 
